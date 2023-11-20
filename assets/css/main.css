@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 313px;
+}
+
+.bizpro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+.bizpro .navbar1 {
+  width: 88%;
+  height: 80px;
+}
+.bizpro .navbar1 #activeBlog {
+  width: 60px;
+  height: 40px;
+  position: relative;
+}
+.bizpro .navbar1 .blogdetails {
+  display: none;
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+  position: absolute;
+  font-weight: 700;
+}
+.bizpro #blogHover:hover + .blogdetails {
+  transform: translateY(0);
+  opacity: 1;
+}
+.bizpro .blogdetails:hover {
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+  color: brown;
+}
+
+.adopted {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adopted .adoption {
+  border: 1px solid gainsboro;
+  width: 182px;
+  height: 150px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: white;
+  opacity: 0;
+  position: absolute;
+  font-weight: 700;
+  display: none;
+}
+.adopted .adoption p {
+  padding: 7px;
+  width: 100%;
+  height: 49px;
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  transition: background-color 0.4s ease;
+}
+.adopted .adoption p:hover {
+  color: white;
+  background-color: brown;
+}
+.adopted .adopt:hover + .adoption {
+  transform: translateY(0);
+  opacity: 1;
+  display: block;
+}
+.adopted .adoption:hover {
+  display: block;
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+}
+.adopted .adoption p:hover {
+  background-color: brown;
+}
+
+.all {
+  width: 100%;
+  height: auto;
+  background-color: #343A40;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.server {
+  width: 90%;
+  background-color: #343A40;
+}
+.server .nava {
+  color: red;
+}
+
+#dropdown {
+  display: none;
+}
+
+.hostings {
+  opacity: 0;
+  background-color: white;
+  padding: 14px;
+  padding-right: 40px;
+  padding-left: 21px;
+  position: absolute;
+  transform: translateY(-20%);
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+.hosting:hover + .hostings {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+.hostings:hover {
+  cursor: pointer;
+  opacity: 1;
+  color: gray;
+  transform: translateY(10%);
+}
+
+.hostings p:hover {
+  color: rgb(0, 216, 0);
+}
+
+.register {
+  width: 112px;
+  height: 42px;
+  background-color: #343A40;
+  border: 1px solid rgb(124, 189, 30);
+  color: white;
+}
+
+.login {
+  width: 90px;
+  height: 42px;
+  border: none;
+  background-color: rgb(124, 189, 30);
+  color: white;
+}
+
+.alls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogger {
+  width: 84%;
+  position: relative;
+}
+
+.single {
+  position: absolute;
+  width: 160px;
+  height: 212px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item.active .single {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.nav-item.active:hover .single {
+  height: 200px;
+  opacity: 1;
+}
+
+.single p {
+  margin: 0;
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
+
+.single p:hover {
+  color: #69B4FD;
+}
+
+@media (max-width: 991px) {
+  .collapse1 {
+    background-color: black;
+  }
+  #bizproNav {
+    width: 100%;
+    padding: 0%;
+  }
+}
